@@ -1,0 +1,11 @@
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\bin\Debug\netcoreapp3.1\LagerSystem.exe
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\bin\Debug\netcoreapp3.1\LagerSystem.deps.json
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\bin\Debug\netcoreapp3.1\LagerSystem.runtimeconfig.json
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\bin\Debug\netcoreapp3.1\LagerSystem.runtimeconfig.dev.json
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\bin\Debug\netcoreapp3.1\LagerSystem.dll
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\bin\Debug\netcoreapp3.1\LagerSystem.pdb
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\obj\Debug\netcoreapp3.1\LagerSystem.csprojAssemblyReference.cache
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\obj\Debug\netcoreapp3.1\LagerSystem.AssemblyInfoInputs.cache
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\obj\Debug\netcoreapp3.1\LagerSystem.AssemblyInfo.cs
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\obj\Debug\netcoreapp3.1\LagerSystem.dll
+C:\Users\Bruger\Desktop\GitHub\Lager-System\LagerSystem\obj\Debug\netcoreapp3.1\LagerSystem.pdb
