@@ -78,8 +78,6 @@ namespace LagerSystem
                     //Adding a product with serial number and amount
                     if(myChoiceOfKey.KeyChar=='2')
                     {
-                        do
-                        {
                             Console.Clear();
                             Console.WriteLine();
                             Console.WriteLine("So you wish to add a product to the site, firstly enter the serial number you want to give it");
@@ -100,8 +98,12 @@ namespace LagerSystem
                                 break;
                             }
                             ProductName.Add(AddProduct);
-
-                        } while (myChoiceOfKey.Key != ConsoleKey.Escape);
+                        Console.WriteLine("Succes! Now how many of the product are there?");
+                        string AddAmount = Console.ReadLine();
+                        Amount.Add(AddAmount);
+                        Console.Clear();
+                        Console.WriteLine("Now. Press any key to return to the main menu");
+                        Console.ReadKey();
                     }
 
                     //Removing/changing a product and/or serial number and/or amount
