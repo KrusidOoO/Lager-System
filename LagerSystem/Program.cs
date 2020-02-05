@@ -46,8 +46,8 @@ namespace LagerSystem
                     Console.WriteLine("--------------------------------------------------------");
                     Console.WriteLine("Please enter the number on the keyboard of the menu that you want to get to");
                     Console.WriteLine("1. Find a product, serial number and amount of said product");
-                    Console.WriteLine("2. Add a product, together with a serial number and how big the amount of said product is");
-                    Console.WriteLine("3. Remove a product, serial number and amount");
+                    Console.WriteLine("2. Add a product, together with a serial number and \nhow big the amount of said product is");
+                    Console.WriteLine("3. Remove or change a product, serial number and/or amount");
                     Console.WriteLine("4. Gets a list of all the products");
                     myChoiceOfKey = Console.ReadKey(true);
 
@@ -80,13 +80,12 @@ namespace LagerSystem
                     {
                             Console.Clear();
                             Console.WriteLine();
-                            Console.WriteLine("So you wish to add a product to the site, firstly enter the serial number you want to give it");
+                            Console.WriteLine("So you wish to add a product to the site, \nfirstly enter the serial number you want to give it");
                             string AddSerial = Console.ReadLine();
                             if (SerialNumbers.Contains(AddSerial))
                             {
                                 Console.WriteLine("Error! serial number already exists");
                                 Console.ReadKey();
-                                break;
                             }
                             SerialNumbers.Add(AddSerial);
                             Console.WriteLine("Success! Now, what is the name of the product?");
@@ -95,7 +94,6 @@ namespace LagerSystem
                             {
                                 Console.WriteLine("Error! Product name already exists");
                                 Console.ReadKey();
-                                break;
                             }
                             ProductName.Add(AddProduct);
                         Console.WriteLine("Succes! Now how many of the product are there?");
@@ -126,6 +124,7 @@ namespace LagerSystem
                         Console.WriteLine("Press any key to return to the main menu");
                         Console.ReadKey();
                     }
+
 
                 } while (myChoiceOfKey.Key != ConsoleKey.Escape);
 
