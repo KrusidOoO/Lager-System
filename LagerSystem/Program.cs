@@ -8,6 +8,7 @@ namespace LagerSystem
 {
     class Program
     {
+        Item Lists = new Item();
         static void Main(string[] args)
         {
             bool LoginOK = false;
@@ -19,9 +20,6 @@ namespace LagerSystem
             List<string> SerialNumbers = new List<string>() {"4100","4101","4102","4103","4104","4105" };
             List<string> ProductName = new List<string>() { "Gloves".ToLower(), "Trousers".ToLower(), "Jeans", "T-shirts", "Overalls", "Turtle neck"};
             List<string> Amount = new List<string>() { "15", "25", "50", "100", "10", "5"};
-            List<Item > Items = new List<Item> { 
-                new Item() { SerialNumbers => "4100"} }
-
 
             do
             {
@@ -132,6 +130,10 @@ namespace LagerSystem
                 } while (myChoiceOfKey.Key != ConsoleKey.Escape);
 
             }
+        }
+        public void RetrieveList()
+        {
+            List<string> calledList = Lists.GetList();
         }
     }
 }
