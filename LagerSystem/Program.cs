@@ -9,6 +9,8 @@ namespace LagerSystem
     class Program
     {
         Item Lists = new Item();
+
+        
         static void Main(string[] args)
         {
             bool LoginOK = false;
@@ -17,10 +19,6 @@ namespace LagerSystem
             string password;
             String[] userNames = { "Andreas Gregersen", "admin","2ndAdmin" };
             String[] passWords = { "1234", "admin","2ndAdmin" };
-            List<string> SerialNumbers = new List<string>() {"4100","4101","4102","4103","4104","4105" };
-            List<string> ProductName = new List<string>() { "Gloves".ToLower(), "Trousers".ToLower(), "Jeans", "T-shirts", "Overalls", "Turtle neck"};
-            List<string> Amount = new List<string>() { "15", "25", "50", "100", "10", "5"};
-
             do
             {
                 Console.Clear();
@@ -59,7 +57,7 @@ namespace LagerSystem
                         string getProduct = "";
                         Console.WriteLine("Please input the product you want to know more of");
                         string productSearch = Console.ReadLine();
-                        int x = ProductName.IndexOf(productSearch);
+                        int x = .IndexOf(productSearch);
                         Console.WriteLine();
                         if (ProductName[x].Contains(productSearch))
                             getProduct = ProductName[x];
@@ -131,9 +129,11 @@ namespace LagerSystem
 
             }
         }
-        public void RetrieveList()
+        public void RetrieveLists()
         {
-            List<string> calledList = Lists.GetList();
+            List<string> calledSerial = Lists.GetSerial();
+            List<string> calledProduct = Lists.GetProduct();
+            List<string> calledAmount = Lists.GetAmount();
         }
     }
 }
