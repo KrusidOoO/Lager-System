@@ -3,6 +3,7 @@ using System.Collections;
 using System.Data;
 using System.Linq;
 using System.Collections.Generic;
+using System.Text;
 
 namespace LagerSystem
 {
@@ -10,9 +11,7 @@ namespace LagerSystem
     {
         static void Main(string[] args)
         {
-            //List<string> SerialNumbers = new List<string>() { "4100", "4101", "4102", "4103", "4104", "4105" };
-            //List<string> Product = new List<string>() { "Gloves", "Trousers", "Jeans", "T-shirts", "Overalls", "Turtle neck" };
-            //List<string> Amount = new List<string>() { "10", "25", "50", "100", "250", "500" };
+
             TaskHandler TH = new TaskHandler();
             bool LoginOK = false;
             int tries=0;
@@ -71,20 +70,8 @@ namespace LagerSystem
                     //Getting a list of the products in stock
                     if (myChoiceOfKey.KeyChar == '4')
                     {
-                        //Console.Clear();
-                        //Console.WriteLine("Here is a list of our products");
-                        //for (int i=0; i < Product.Count(); i++)
-                        //{
-                        //    Console.WriteLine(Product[i]);
-                        //}
-                        //Console.WriteLine();
-                        //Console.WriteLine("----------------------------------------");
-                        //Console.WriteLine();
-                        //Console.WriteLine("Press any key to return to the main menu");
-                        //Console.ReadKey();
+                        TH.ListOfItems();
                     }
-
-
                 } while (myChoiceOfKey.Key != ConsoleKey.Escape);
 
             }
