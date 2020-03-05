@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\Desktop\\GitHub\\Lager-System\\LagerSystem\\LagerSystem.csproj": {}
+    "C:\\Users\\JesperBertelsen\\Desktop\\GitHub\\Lager-System\\LagerSystem\\LagerSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\Desktop\\GitHub\\Lager-System\\LagerSystem\\LagerSystem.csproj": {
+    "C:\\Users\\JesperBertelsen\\Desktop\\GitHub\\Lager-System\\LagerSystem\\LagerSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\GitHub\\Lager-System\\LagerSystem\\LagerSystem.csproj",
+        "projectUniqueName": "C:\\Users\\JesperBertelsen\\Desktop\\GitHub\\Lager-System\\LagerSystem\\LagerSystem.csproj",
         "projectName": "LagerSystem",
-        "projectPath": "C:\\Users\\Bruger\\Desktop\\GitHub\\Lager-System\\LagerSystem\\LagerSystem.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Desktop\\GitHub\\Lager-System\\LagerSystem\\obj\\",
+        "projectPath": "C:\\Users\\JesperBertelsen\\Desktop\\GitHub\\Lager-System\\LagerSystem\\LagerSystem.csproj",
+        "packagesPath": "C:\\Users\\JesperBertelsen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JesperBertelsen\\Desktop\\GitHub\\Lager-System\\LagerSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\JesperBertelsen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -57,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
