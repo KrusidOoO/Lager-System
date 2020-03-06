@@ -134,6 +134,7 @@ namespace LagerSystem
 
         public void RemoveAndEdit()
         {
+            Console.Clear();
             Console.WriteLine("Please enter the action you want to take");
             Console.WriteLine("----------------------------------------");
             Console.WriteLine("1. Edit a Serial number, product or amount");
@@ -145,12 +146,27 @@ namespace LagerSystem
             }
             else if (keyInfo.KeyChar == '2')
             {
-                if (Serial().Any()&&Product().Any()&&Amount().Any())
+                string getProduct;
+
+                for (int i = 0; i < this.Product().Count(); i++)
                 {
-                    Serial().RemoveAt(Serial().Count - 1);
-                    Product().RemoveAt(Product().Count - 1);
-                    Amount().RemoveAt(Amount().Count - 1);
+                    Console.WriteLine(this.Serial()[i] + " " + 
+                        this.Product()[i] + " " + this.Amount()[i]);
+                    Console.WriteLine();
                 }
+                Console.WriteLine("---------------------");
+                Console.WriteLine("Please enter the product you want to delete.");
+
+                getProduct = Console.ReadLine();
+                int x = this.Product().IndexOf(getProduct);
+
+                this.Serial().RemoveAt(x);
+                this.Product().RemoveAt(x);
+                this.Amount().RemoveAt(x);
+
+                Console.WriteLine();
+                Console.WriteLine("Delete completed");
+                Console.ReadKey();
             }
         }
         public void ListOfItems()

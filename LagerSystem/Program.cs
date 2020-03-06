@@ -50,28 +50,30 @@ namespace LagerSystem
                     Console.WriteLine("4. Gets a list of all the products");
                     myChoiceOfKey = Console.ReadKey(true);
 
-                    //Finding a product
-                    if (myChoiceOfKey.KeyChar == '1')
+
+
+                    switch (myChoiceOfKey.KeyChar)
                     {
-                        TH.Search();
+                //Finding a product
+                        case '1':
+                            TH.Search();
+                            break;
+                //Adding a product with serial number and amount
+                        case '2':
+                            TH.Addition();
+                            break;
+                //Removing/changing a product and/or serial number and/or amount
+                        case '3':
+                            TH.RemoveAndEdit();
+                            break;
+                //Getting a list of the products in stock
+                        case '4':
+                            TH.ListOfItems();
+                            break;
+                        default:
+                            break;
                     }
 
-                    //Adding a product with serial number and amount
-                    if(myChoiceOfKey.KeyChar=='2')
-                    {
-                        TH.Addition();
-                    }
-
-                    //Removing/changing a product and/or serial number and/or amount
-                    if(myChoiceOfKey.KeyChar=='3')
-                    {
-
-                    }
-                    //Getting a list of the products in stock
-                    if (myChoiceOfKey.KeyChar == '4')
-                    {
-                        TH.ListOfItems();
-                    }
                 } while (myChoiceOfKey.Key != ConsoleKey.Escape);
 
             }
