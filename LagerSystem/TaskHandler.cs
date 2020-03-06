@@ -132,6 +132,27 @@ namespace LagerSystem
 
         }
 
+        public void RemoveAndEdit()
+        {
+            Console.WriteLine("Please enter the action you want to take");
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("1. Edit a Serial number, product or amount");
+            Console.WriteLine("2. Delete a set of Serial number, product and amount");
+
+            if(keyInfo.KeyChar=='1')
+            {
+
+            }
+            else if (keyInfo.KeyChar == '2')
+            {
+                if (Serial().Any()&&Product().Any()&&Amount().Any())
+                {
+                    Serial().RemoveAt(Serial().Count - 1);
+                    Product().RemoveAt(Product().Count - 1);
+                    Amount().RemoveAt(Amount().Count - 1);
+                }
+            }
+        }
         public void ListOfItems()
         {
             Console.Clear();
