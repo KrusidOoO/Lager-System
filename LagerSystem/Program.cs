@@ -11,7 +11,6 @@ namespace LagerSystem
     {
         static void Main(string[] args)
         {
-
             TaskHandler TH = new TaskHandler();
             bool LoginOK = false;
             int tries=0;
@@ -49,9 +48,6 @@ namespace LagerSystem
                     Console.WriteLine("3. Remove or change a product, serial number and/or amount");
                     Console.WriteLine("4. Gets a list of all the products");
                     myChoiceOfKey = Console.ReadKey(true);
-
-
-
                     switch (myChoiceOfKey.KeyChar)
                     {
                 //Finding a product
@@ -73,11 +69,8 @@ namespace LagerSystem
                         default:
                             break;
                     }
-
                 } while (myChoiceOfKey.Key != ConsoleKey.Escape);
-
             }
-            
         }
     }
 }

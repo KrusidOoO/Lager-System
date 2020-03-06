@@ -107,7 +107,6 @@ namespace LagerSystem
                         Console.WriteLine("Success! Product name added \nPress Enter on your keyboard to continue");
                         this.Product().Add(AddProduct);
                         keyInfo = Console.ReadKey();
-
                     }
                 } while (keyInfo.Key != ConsoleKey.Enter);
                 Console.Clear();
@@ -131,7 +130,6 @@ namespace LagerSystem
             } while (keyInfo.Key != ConsoleKey.Enter);
 
         }
-
         public void RemoveAndEdit()
         {
             Console.Clear();
@@ -139,34 +137,75 @@ namespace LagerSystem
             Console.WriteLine("----------------------------------------");
             Console.WriteLine("1. Edit a Serial number, product or amount");
             Console.WriteLine("2. Delete a set of Serial number, product and amount");
-
-            if(keyInfo.KeyChar=='1')
+            keyInfo = Console.ReadKey();
+            switch (keyInfo.KeyChar)
             {
-
-            }
-            else if (keyInfo.KeyChar == '2')
-            {
-                string getProduct;
-
-                for (int i = 0; i < this.Product().Count(); i++)
-                {
-                    Console.WriteLine(this.Serial()[i] + " " + 
-                        this.Product()[i] + " " + this.Amount()[i]);
+                case '1':
+                    Console.Clear();
                     Console.WriteLine();
-                }
-                Console.WriteLine("---------------------");
-                Console.WriteLine("Please enter the product you want to delete.");
-
-                getProduct = Console.ReadLine();
-                int x = this.Product().IndexOf(getProduct);
-
-                this.Serial().RemoveAt(x);
-                this.Product().RemoveAt(x);
-                this.Amount().RemoveAt(x);
-
-                Console.WriteLine();
-                Console.WriteLine("Delete completed");
-                Console.ReadKey();
+                    Console.WriteLine("---------------------------");
+                    Console.WriteLine("So you want to edit a product, so let us do that");
+                    Console.WriteLine();
+                    for (int i = 0; i < this.Product().Count(); i++)
+                    {
+                        Console.WriteLine(this.Serial()[i] + " " +
+                            this.Product()[i] + " " + this.Amount()[i]);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine("Here is a list of the available products to edit");
+                    Console.WriteLine();
+                    Console.WriteLine("Please enter the name of the product you want to edit");
+                    string getProductName;
+                    string changedProduct;
+                    string changedAmount;
+                    getProductName = Console.ReadLine();
+                    Console.WriteLine("Okay, so you want to edit "+getProductName);
+                    Console.WriteLine();
+                    Console.WriteLine("Enter the changes you want to apply to product");
+                    this.Product()[this.Product().FindIndex(ind => ind.Equals(getProductName))] = changedProduct = Console.ReadLine();
+                    int y = this.Product().IndexOf(changedProduct);
+                    var getAmount = this.Amount().ElementAt(y);
+                    Console.Clear();
+                    Console.WriteLine();
+                    Console.WriteLine("Enter the changes you want to apply to amount");
+                    this.Amount()[this.Amount().FindIndex(ind => ind.Equals(getAmount))]= changedAmount = Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine();
+                    Console.WriteLine("Changes completed");
+                    Console.WriteLine();
+                    Console.WriteLine("Press any key to return to main menu");
+                    Console.ReadKey();
+                    break;
+                case '2':
+                    string getProduct;
+                    Console.Clear();
+                    for (int i = 0; i < this.Product().Count(); i++)
+                    {
+                        Console.WriteLine(this.Serial()[i] + " " +
+                            this.Product()[i] + " " + this.Amount()[i]);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine("---------------------");
+                    Console.WriteLine("Please enter the product you want to delete.");
+                    getProduct = Console.ReadLine();
+                    int x = this.Product().IndexOf(getProduct);
+                    this.Serial().RemoveAt(x);
+                    this.Product().RemoveAt(x);
+                    this.Amount().RemoveAt(x);
+                    Console.WriteLine();
+                    for (int i = 0; i < this.Product().Count(); i++)
+                    {
+                        Console.WriteLine(this.Serial()[i] + " " +
+                            this.Product()[i] + " " + this.Amount()[i]);
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine("Delete completed");
+                    Console.ReadKey();
+                    break;
+                default:
+                    break;
             }
         }
         public void ListOfItems()
@@ -183,8 +222,5 @@ namespace LagerSystem
             Console.WriteLine("Press any key to return to the main menu");
             Console.ReadKey();
         }
-            
-
-
     }
 }
