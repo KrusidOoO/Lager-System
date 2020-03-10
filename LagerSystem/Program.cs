@@ -22,9 +22,13 @@ namespace LagerSystem
             {
                 Console.Clear();
                 tries++;
-                Console.WriteLine("Please enter your name");
+                Console.WriteLine("\n--------------------------" +
+                                  "\n| Please enter your name |" +
+                                  "\n--------------------------");
                 name = Console.ReadLine();
-                Console.WriteLine("Please enter your password");
+                Console.WriteLine("\n------------------------------" +
+                                  "\n| Please enter your password |" +
+                                  "\n------------------------------");
                 password = Console.ReadLine();
                 for(int i=0;i<3;i++)
                 {
@@ -39,14 +43,15 @@ namespace LagerSystem
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine();
-                    Console.WriteLine("Hello there and welcome to the storage managment program");
-                    Console.WriteLine("--------------------------------------------------------");
-                    Console.WriteLine("Please enter the number on the keyboard of the menu that you want to get to");
-                    Console.WriteLine("1. Find a product, serial number and amount of said product");
-                    Console.WriteLine("2. Add a product, together with a serial number and \nhow big the amount of said product is");
-                    Console.WriteLine("3. Remove or change a product, serial number and/or amount");
-                    Console.WriteLine("4. Gets a list of all the products");
+                    Console.WriteLine("\nHello there and welcome to the storage managment program" +
+                                      "\n--------------------------------------------------------" +
+                                      "\nPlease enter the number on the keyboard of the menu that you want to get to" +
+                                      "\n1. Find a product, serial number and amount of said product" +
+                                      "\n2. Add a product, together with a serial number and \nhow big the amount of said product is" +
+                                      "\n3. Remove or change a product, serial number and/or amount" +
+                                      "\n4. Gets a list of all the products" +
+                                      "\n\nPress Escape to exit the application." +
+                                      "\n--------------------------------------------------------");
                     myChoiceOfKey = Console.ReadKey(true);
                     switch (myChoiceOfKey.KeyChar)
                     {
