@@ -30,13 +30,13 @@ namespace LagerSystem
         {
             Console.Clear();
             string getProduct = "";
-            Console.WriteLine("\nHere is a list of the products in storage.\n");
+            Console.WriteLine("\nHere is a list of the products in storage.\n---------------------------------------\n");
             for (int i = 0; i < this.Product().Count(); i++)
             {
                 Console.WriteLine(this.Product()[i]);
                 Console.WriteLine();
             }
-            Console.WriteLine("\nPlease input the product/product name, you want to know more about: ");
+            Console.WriteLine("----------------------------------------\nPlease input the product/product name, you want to know more about: ");
             string productSearch = Console.ReadLine();
             int x = this.Product().IndexOf(productSearch);
             Console.WriteLine();
@@ -48,7 +48,7 @@ namespace LagerSystem
             var getSerial = this.Serial().ElementAt(index);
             var getAmount = this.Amount().ElementAt(index);
             Console.Clear();
-            Console.WriteLine("\n#" + getSerial + " : " + char.ToUpper(getProduct[0])+getProduct.Substring(1) + "\nAmount: " + getAmount + "\n----------------------------------\nPress any key to return to the main menu");
+            Console.WriteLine("\n-----------------------------------------\n#" + getSerial + " : " + char.ToUpper(getProduct[0])+getProduct.Substring(1) + "\nAmount: " + getAmount + "\n-----------------------------------------\nPress any key to return to the main menu");
             Console.ReadKey();
             return;
         }
@@ -57,7 +57,6 @@ namespace LagerSystem
             string AddSerial;
             string AddProduct;
             string AddAmount;
-            int counter = 0;
             do
             {
                 do
@@ -69,23 +68,20 @@ namespace LagerSystem
                         Console.WriteLine("#" + this.Serial()[i] + " : " + this.Product()[i] + "\nAmount: " + this.Amount()[i]);
                     }
                     Console.WriteLine("\n-----------------------------------------------\nSo you want to add a product to the site\nFirstly enter the serial number you want to add\n(note: it cannot be a serial number that already exists in the list above):");
-                    counter++;
                     AddSerial = Console.ReadLine();
-                    if (this.Serial().Contains(AddSerial)||counter<1)
+                    if (this.Serial().Contains(AddSerial))
                     {
                         Console.Clear();
                         Console.WriteLine("Error! Serial number already exists\nPress any key to retry");
                         Console.ReadKey();
                     }
-                    else if (!this.Serial().Contains(AddSerial)||counter>1)
+                    else if (!this.Serial().Contains(AddSerial))
                     {
                         Console.Clear();
                         Console.WriteLine("Success! Serial number has been added \nPress Enter on your keyboard to continue");
                         this.Serial().Add(AddSerial);
                         keyInfo = Console.ReadKey();
                     }
-                    else if(this.Serial().Contains(AddSerial)&&counter<1)
-                        this.Serial().RemoveAt(this.Serial().Count - 1);
                 } while (keyInfo.Key != ConsoleKey.Enter);
                 do
                 {
